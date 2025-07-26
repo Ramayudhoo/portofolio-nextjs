@@ -4,14 +4,9 @@ import Lanyard from "./components/Lanyard/Lanyard";
 import TextType from "./components/TextType/TextType";
 import Galaxy from "./components/Galaxy/Galaxy";
 import SplitText from "./components/SplitText/SplitText";
-export default function Home() {
-  const items = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" },
-  ];
+import BlurText from "./components/BlurText/BlurText";
 
+export default function Home() {
   return (
     <div className="min-h-screen overflow-hidden">
       <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full">
@@ -25,23 +20,11 @@ export default function Home() {
 
         />
       </div>
-      <div className="z-10 flex justify-center pt-6">
-        <GooeyNav
-          items={items}
-          particleCount={15}
-          particleDistances={[90, 10]}
-          particleR={100}
-          initialActiveIndex={0}
-          animationTime={600}
-          timeVariance={300}
-          colors={[1, 2, 3, 1, 2, 3, 1, 4]}
-        />
-      </div>
       <div className="container mx-auto h-screen">
         <div className="grid grid-cols-12">
           <div className="col-span-6 ">
             <div className="flex flex-col h-full pl-10 justify-center">
-            <div>
+            <div className="flex gap-0">
               <SplitText
                 text="Hello,World!"
                 className="text-2xl font-semibold text-start"
@@ -71,21 +54,32 @@ export default function Home() {
                 textAlign="center"
               />
             </div>
-            <div className="flex flex-col gap-4 item-start">
+            <div className="mt-4 mb-0">
+            <div className="flex mt-0 mb-0">
+              <BlurText
+              text="I'm Ready For New Job"
+              delay={70}
+              animateBy="words"
+              direction="top"
+              className="text-2xl mb-0 font-bold"
+              />
+            </div>
+            <div className="flex flex-col gap-0 item-start">
               <TextType
                 text={[
                   "Web Developer",
                   "Full-Stack Developer",
-                  "Tech Enthusiast!",
                   "Front-End Developer",
-                  "Fresh Graduate",
                 ]}
-                typingSpeed={75}
-                className="text-white text-4xl font-bold text-start"
+                typingSpeed={100}
+                className=" text-4xl font-bold text-start"
                 pauseDuration={1500}
                 showCursor={true}
                 cursorCharacter="|"
+                deletingSpeed={50}
+                textColors={["#FFCC00", "#FFCC00", "#FFCC00"]}
               />
+            </div>
             </div>
           </div>
         </div>
