@@ -11,13 +11,12 @@ export default function Home() {
     <div className="min-h-screen overflow-hidden">
       <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full">
         <Galaxy
-        mouseRepulsion={true}
+        mouseRepulsion={false}
         mouseInteraction={true}
         density={1.5}
         glowIntensity={0.5}
         saturation={0.8}
-        hueShift={240}
-
+        hueShift={0}
         />
       </div>
       <div className="container mx-auto h-screen">
