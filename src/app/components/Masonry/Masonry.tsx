@@ -65,6 +65,9 @@ interface Item {
   img: string;
   url: string;
   height: number;
+  title: string;
+  description: string;
+  tech: string[];
 }
 
 interface MasonryProps {
